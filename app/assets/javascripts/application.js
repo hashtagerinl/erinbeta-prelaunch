@@ -14,3 +14,32 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+$('document').ready(function() {
+
+  // display validation errors for the "request invitation" form
+  if ($('.alert-error').length > 0) {
+    $("#request-invite").modal('toggle');
+  }
+
+  // use AJAX to submit the "request invitation" form
+  $('#invitation_button').live('click', function() {
+    var email = $('form #user_email').val();
+    var opt_in;
+    if($('form #user_opt_in').is(':checked'))
+        opt_in = true;
+    else
+        opt_in = false;
+    var dataString = 'user[email]='+ email + '&user[opt_in]=' + opt_in;
+    $.ajax({
+      type: "POST",
+      url: "/users",
+      data: dataString,
+      success: function(data) {
+        $('#request-invite').html(data);
+        loadSocial();
+      }
+    });
+    return false;
+  });
+
+})
