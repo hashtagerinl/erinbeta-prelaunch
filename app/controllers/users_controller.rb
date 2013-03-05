@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
     @users = User.all
+    @chart = create_chart
   end
 
   def show
@@ -40,6 +41,8 @@ class UsersController < ApplicationController
     data_table.new_column('number')
     users_by_day.each do |day|
       data_table.add_row([ Date.parse(day[0].to_s), day[1]])
+    end
+    @chart = GoogleVisualr::Interactive::AnnotatedTimeLine.new(data_table)  
   end
-  @chart = GoogleVisualr::Interactive::AnnotatedTimeLine.new(data_table)  
+
 end
