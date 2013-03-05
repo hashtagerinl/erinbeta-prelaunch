@@ -1,11 +1,7 @@
-<h2>Sign up</h2>
+<h2>Request Invitation</h2>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-  <%= f.error_notification %>
-  <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
+  <%= devise_error_messages! %>
   <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
+  <%= f.input :opt_in, :label => false, :inline_label => 'Please send announcements.' %>
+  <%= f.button :submit, 'Request Invitation', :class => 'btn-primary' %>
 <% end %>
-<%= render "devise/shared/links" %>
