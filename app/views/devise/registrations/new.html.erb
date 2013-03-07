@@ -6,17 +6,70 @@
     </div>
     <div class="modal-body">
       <%= f.error_notification %>
-      <%= f.input :email, :placeholder => 'user@example.com' %>
+      
+      <%= f.input :email, :placeholder => 'enter your email here ...' %>
     </div>
     <div class="modal-footer">
-      <%= f.submit "Request Invitation", :class => "btn btn-primary", :id => 'invitation_button' %>
+      <%= f.submit "Request Invitation", :class => "btn btn-inverse", :id => 'invitation_button' %>
       <a class="btn" data-dismiss="modal" href="#">Close</a>
     </div>
   <% end %>
 </div>
-<div id="romance-copy" style="text-align: center; margin-top: 80px">
-  <h2>Want in?</h2>
+
+
+
+
+
+
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+  <div class="container clear">
+    <div id="content" class="row-fluid" align="center">
+      <div class="span12">
+        <div class="span4" id="erinbeta-logo">
+          <h1>erinl.ee<sup>beta</sup></h1>
+        </div>
+        <div class="span8" id="erinbeta-invite">
+          <h2><a data-toggle="modal" href="#request-invite">Request an invite</a></h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="thumbs" data-slide="2"><a href="#slide2"><%= image_tag("nounproject-thumbs.png", {:width =>45}) %></a></div>
+  </div>
 </div>
-<div id="call-to-action" style="text-align: center; margin-top: 80px">
-  <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
+
+
+
+<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+  <div class="container clearfix">
+    <div id="content" class="row-fluid">
+      <div class="span4">
+        <div id="education" ><%= image_tag "erinbeta-northwestern.png" %></div>
+        <h2><%= link_to "Northwestern University", "http://www.northwestern.edu" %></h2>
+        alum.<br>courses I’d retake: behavioral economics & economies of developing countries.
+      </div>
+        <div class="span4">
+        <div id="education" ><%= image_tag "erinbeta-school.png" %></div>
+        <h2><%= link_to "School of Hard Knocks", "http://www.urbandictionary.com/define.php?term=school%20of%20hard%20knocks" %></h2>always.<br>
+        learning from failures and triumphs, risks and travels.
+      </div>
+        <div class="span4">
+          <div id="education" ><%= image_tag "erinbeta-flatiron.png" %></div>
+        <h2><%= link_to "Flatiron School", "http://www.flatironschool.com" %></h2>now.<br>
+        ruby on rails. code. code. code. git commit. code. git push.
+        <br>deploy.
+      </div>
+      <div id="erinbeta-intro" class="span12" align="center">
+        <h3>Hi, erinl.ee is currently in beta.</h3>
+        <p>Get ready for the exciting launch of a most extraordinary new startup - from zero programming experience to full-stack developer.  <br>New features are under development at the Flatiron. It's really happening.<br><br>
+        
+        Just a few months until official release:</p>
+        <div class="progress progress-striped active">
+        <div class="bar" style="width: 35%;">
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 </div>
