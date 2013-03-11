@@ -65,7 +65,7 @@ a:visited {
 	width:100%;
 	height:auto;
 	position: relative;
-	padding:500px 0;
+	padding:150px 0;
 	color: #fff;
 }
 
@@ -109,7 +109,22 @@ a:visited {
 	background-size: cover;
 	background-color:#f2836b;
 	height: 600px;
-	padding-top: 300px;
+/*	padding-top: 300px;*/
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+
+	/* Safari, Opera, and Chrome */
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+	/* W3C */
+	display:box;
+	box-pack:center;
+	box-align:center;
+
 }
 #slide1 h1 {
 	font-size: 2em;
