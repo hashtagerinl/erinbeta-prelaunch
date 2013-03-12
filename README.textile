@@ -1,0 +1,17 @@
+erinbeta Prelaunch
+========================
+
+Feel free to fork this site and create your own prelaunch site.
+
+This application was generated with the rails_apps_composer gem:
+https://github.com/RailsApps/rails_apps_composer
+
+App created following the RailsApp Prelaunch tutorial:
+http://railsapps.github.com/tutorial-rails-prelaunch-signup.html
+
+________________________
+
+Credits:
+<a href="http://thenounproject.com/noun/thumbs-up/#icon-No12734" target="_blank">Thumbs Up</a> designed by <a href="http://thenounproject.com/fencehopping" target="_blank">Nick Holroyd</a> from The Noun Project
+
+<a href="http://thenounproject.com/noun/wreath/#icon-No11886" target="_blank">Wreath</a> designed by <a href="http://thenounproject.com/dill" target="_blank">Jakub Ukrop</a> from The Noun Project
